@@ -5,7 +5,9 @@ import random
 import schedule
 import time
 from discord_webhook import DiscordWebhook, DiscordEmbed
+from dotenv import load_dotenv
 
+load_dotenv()
 webhookUrl = os.environ.get("DISCORD_WEBHOOK_URL")
 if not webhookUrl:
     raise ValueError("DISCORD_WEBHOOK_URL is missing or not loaded from .env")
