@@ -1,0 +1,3 @@
+PyYAML
+schedule
+discord-webhook
