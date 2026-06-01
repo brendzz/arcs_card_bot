@@ -46,11 +46,12 @@ def pick_card(cards, used):
 
 def send_card(card):
     image_url = f"{baseImageUrl}{card['image']}.webp"
+    description=card.get("text") or "This card has no text entered."
 
     webhook = DiscordWebhook(url=str(webhookUrl))
     embed = DiscordEmbed(
         title=card["name"],
-        description=card["text"],
+        description=description,
         color=0x3498db
     )
     embed.set_image(url=image_url)
